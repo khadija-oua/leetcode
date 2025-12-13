@@ -6,17 +6,14 @@
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        s = set()
         A = headA
         B = headB
-        while A:
-            s.add(A)
-            A=A.next
-        while B :
-            if B in s:
-                return B
-            B = B.next 
-        
-        return None
+        while A != B :
+            if A is None: A=headB
+            else :  A=A.next 
+            if B is None: B=headA
+            else :  B= B.next
+           
+        return A
 
         
