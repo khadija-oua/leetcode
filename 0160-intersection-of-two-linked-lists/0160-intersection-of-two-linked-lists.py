@@ -12,7 +12,7 @@ class Solution:
         while A:
             s.add(A)
             A=A.next
-        while B and B.next:
+        while B :
             if B in s:
                 return B
             B = B.next 
